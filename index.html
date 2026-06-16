@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SeatSight — Movie Theater Seat Preview</title>
+  <meta name="description" content="Pick a movie theater seat and preview the screen view from that exact seat." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <section class="hero glass">
+      <div>
+        <p class="eyebrow">SeatSight · POV seat booking</p>
+        <h1>Dune: Part Two</h1>
+        <p class="muted">Metro Cinema · Auditorium 4 · Tonight · 7:30 PM · IMAX Laser · 2h 46m</p>
+      </div>
+      <div class="heroBadge">
+        <span>Live preview</span>
+        <strong id="selectedHeroSeat">F8</strong>
+      </div>
+    </section>
+
+    <section class="layout">
+      <section class="left glass">
+        <div class="sectionHead">
+          <div>
+            <p class="eyebrow">Choose your seat</p>
+            <h2>Auditorium map</h2>
+          </div>
+          <button class="ghost" id="bestSeatBtn">Best available</button>
+        </div>
+
+        <div class="screenLabel">Screen</div>
+        <div class="screenGlow"></div>
+        <div id="seatMap" class="seatMap" aria-label="Interactive theater seat map"></div>
+
+        <div class="legend">
+          <span><i class="dot available"></i>Available</span>
+          <span><i class="dot premium"></i>Premium</span>
+          <span><i class="dot selected"></i>Selected</span>
+          <span><i class="dot occupied"></i>Occupied</span>
+        </div>
+      </section>
+
+      <aside class="right">
+        <section class="preview glass">
+          <div class="previewTop">
+            <div>
+              <p class="eyebrow">Screen POV</p>
+              <h2 id="previewTitle">View from F8</h2>
+            </div>
+            <span id="viewPill" class="pill">Best view</span>
+          </div>
+          <div class="povStage">
+            <div id="povRoom" class="povRoom">
+              <div class="rearLights"></div>
+              <div id="povScreen" class="povScreen">
+                <span>Metro Cinema</span>
+                <b>DUNE</b>
+              </div>
+              <div class="floorLines"></div>
+              <div id="crosshair" class="crosshair"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="details glass" id="details"></section>
+      </aside>
+    </section>
+  </main>
+
+  <div class="toast" id="toast">Seat unavailable</div>
+  <script src="app.js"></script>
+</body>
+</html>
