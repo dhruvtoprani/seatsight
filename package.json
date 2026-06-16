@@ -4,8 +4,7 @@
   "description": "SeatSight movie theater booking interface with seat POV previews",
   "scripts": {
     "dev": "node server.js",
-    "start": "node server.js",
-    "build": "node -e \"console.log('SeatSight is a static app; no build step required.')\""
+    "build": "node -e \"console.log('ok')\""
   },
   "license": "MIT"
 }
