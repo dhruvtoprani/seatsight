@@ -1,0 +1,1 @@
+{"name":"seatsight","version":"1.0.0","description":"SeatSight movie theater booking interface with seat POV previews","scripts":{"dev":"node server.js","start":"node server.js"},"license":"MIT"}
